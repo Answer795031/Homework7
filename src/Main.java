@@ -60,7 +60,7 @@ public class Main {
             System.out.print(counter + " ");
             counter += 1;
         }
-        System.out.println("");
+        System.out.println(" ");
 
         for (counter = 10; counter >= 1; counter--) {
             System.out.print(counter + " ");
