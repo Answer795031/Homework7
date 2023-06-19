@@ -26,10 +26,11 @@ public class Main {
         int salary = 15000;
         int total = 0;
         int month = 0;
+        int target = 2_459_000;
 
-        while (total <= 2459000) {
+        while (total < target) {
             total += salary;
-            month += 1;
+            month++;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
 
@@ -58,7 +59,7 @@ public class Main {
         int counter = 1;
         while (counter <= 10) {
             System.out.print(counter + " ");
-            counter += 1;
+            counter++;
         }
         System.out.println(" ");
 
@@ -90,7 +91,7 @@ public class Main {
         while (yearCounter <= 10) {
             populationY += ((birthRate - mortalityRate) * modyfier);
             System.out.println("Год " + yearCounter + ", численность населения составляет " + populationY + " человек");
-            yearCounter += 1;
+            yearCounter++;
         }
         System.out.println(" ");
 
@@ -115,10 +116,10 @@ public class Main {
         double percent = 7;             // Процент по вкладу
         int month = 0;                  // Счетчик месяцев
 
-        while (totalCash <= targetCash) {
+        while (totalCash < targetCash) {
             totalCash += cash;  // Для случаев ежемесячного пополнения вклада (в словии не указывается, есть ли оно, добавил на всякий случай)
             totalCash += percent * (totalCash / 100);
-            month += 1;
+            month++;
             System.out.println("Месяц " + month + ", сумма накоплений: " + (int) totalCash + " руб.");
         }
         System.out.println("\nДля достижения целевой суммы " + (int) targetCash + " рублей понадобится " + month + " месяцев\n");
@@ -139,10 +140,10 @@ public class Main {
         double percent = 7;             // Процент по вкладу
         int month = 0;                  // Счетчик месяцев
 
-        while (totalCash <= targetCash) {
+        while (totalCash < targetCash) {
             totalCash += cash;  // Для случаев ежемесячного пополнения вклада (в словии не указывается, есть ли оно, добавил на всякий случай)
             totalCash += percent * (totalCash / 100);
-            month += 1;
+            month++;
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + ", сумма накоплений: " + (int) totalCash + " руб.");
             }
@@ -173,7 +174,7 @@ public class Main {
         while (monthCount <= month) {
             totalCash += cash;
             totalCash += percent * (totalCash / 100);
-            monthCount += 1;
+            monthCount++;
             if (monthCount % 6 == 0) {
                 System.out.println("Месяц " + monthCount + ", сумма накоплений: " + (int) totalCash + " руб.");
             }
@@ -199,9 +200,9 @@ public class Main {
          */
 
         int firstFriday = (int) (Math.random() * 7 + 1); // Вместо прописывания номера первой пятницы случайное генерирование
-        int daysPerMonth = 31;                           // дней в месяц
-        for (int i = firstFriday; i <= daysPerMonth; i += 7) {
-            System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
+        int daysPerMonth = 31;                           // дней в месяце
+        for (; firstFriday <= daysPerMonth; firstFriday += 7) {
+            System.out.println("Сегодня пятница, " + firstFriday + "-е число. Необходимо подготовить отчет");
         }
         System.out.println(" ");
 
@@ -233,9 +234,9 @@ public class Main {
         int endOfPeriod = year + 100;
         int cometFrequency = 79;
 
-        for (int i = startOfPeriod; i <= endOfPeriod; i++) {
-            if (i % cometFrequency == 0) {
-                System.out.println(i + " - год появления кометы");
+        for (; startOfPeriod <= endOfPeriod; startOfPeriod++) {
+            if (startOfPeriod % cometFrequency == 0) {
+                System.out.println(startOfPeriod + " - год появления кометы");
             }
         }
         System.out.println(" ");
